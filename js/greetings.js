@@ -1,6 +1,5 @@
 const loginForm = document.getElementById("login-form");
 const loginInput = loginForm.querySelector("input");
-/* document.querySelctor("#login-form button") 같은것*/
 const greeting = document.querySelector("#greeting");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -14,7 +13,7 @@ if (saveUserName === null) {
 }
 
 function paintGreetings(username) {
-  greeting.innerText = `hello ${username}`;
+  greeting.innerText = `Hello, ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 

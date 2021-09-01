@@ -1,0 +1,45 @@
+.hidden {
+  display: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 35vh;
+}
+
+.main__prompt {
+  max-width: 87.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__form {
+  width: 100%;
+}
+
+.main__form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__clock {
+  font-size: 150px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.main__greeting {
+  font-size: 55px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.main__form label {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
