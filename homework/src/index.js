@@ -1,35 +1,32 @@
-const numSelectForm = document.querySelector("#selectNumForm");
-const rangeInput = document.querySelector("#selectRangeInput");
-const numSelectInput = numSelectForm.querySelector("input");
-const numSelectBtn = document.querySelector("#selectNumBtn");
-const scoreSection = document.querySelector("#showScore");
-const resultSection = document.getElementById("showResult");
-const USERNUM_KEY = "usernum";
+const colors = [
+  "#ef5777",
+  "#575fcf",
+  "#4bcffa",
+  "#34e7e4",
+  "#0be881",
+  "#f53b57",
+  "#3c40c6",
+  "#0fbcf9",
+  "#00d8d6",
+  "#05c46b",
+  "#ffc048",
+  "#ffdd59",
+  "#ff5e57",
+  "#d2dae2",
+  "#485460",
+  "#ffa801",
+  "#ffd32a",
+  "#ff3f34",
+];
+const btn = document.querySelector("button");
 
-rangeInput.addEventListener("click", onSelectRange);
-
-function onSelectRange(event) {
-  numSelectInput.max = rangeInput.value;
-}
-
-numSelectForm.addEventListener("submit", onSelectNum);
-
-function onSelectNum(event) {
-  const userNum = numSelectInput.value;
+function handleBtnClick(event) {
   event.preventDefault();
-  scoreSection.classList.remove("hidden");
-  resultSection.classList.remove("hidden");
-  localStorage.setItem(USERNUM_KEY, userNum);
-  showResult(
-    localStorage.getItem(USERNUM_KEY),
-    Math.floor(Math.random() * rangeInput.value + 1)
-  );
+  const colorpick1 = Math.floor(Math.random() * colors.length);
+  const colorpick2 = Math.floor(Math.random() * colors.length);
+  const style = document.createElement("style");
+  style.innerHTML = `body{background: linear-gradient(0.25turn,${colors[colorpick1]}, ${colors[colorpick2]});}`;
+  document.head.appendChild(style);
 }
 
-function showResult(saveUserChosenNum, muchineChosenNum) {
-  const resultMessage = ["You won!", "You lost!"];
-  scoreSection.innerText = `You chose: ${saveUserChosenNum}, the machine chose: ${muchineChosenNum}`;
-  if (saveUserChosenNum != muchineChosenNum)
-    resultSection.innerText = `Show result: ${resultMessage[1]}`;
-  else resultSection.innerText = `Show result: ${resultMessage[0]}`;
-}
+btn.addEventListener("click", handleBtnClick);
