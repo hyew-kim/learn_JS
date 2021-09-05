@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="view center">
-      <header></header>
+    <div class="main-content">
+      <header id="weather" class="weather">
+        <img class="weather__img" />
+        <div class="weather__info">
+          <span></span>
+          <span></span>
+        </div>
+      </header>
 
       <main class="main">
         <div class="main__prompt">
@@ -27,13 +33,18 @@
               <button class="hidden">Log in</button>
             </div>
           </form>
+          <h1 id="greeting" class="hidden main__greeting"></h1>
         </div>
-        <h1 id="greeting" class="hidden main__greeting"></h1>
-        <form id="todo-form">
-          <label for="todo-input">What is yout main focus for today?</label>
-          <input id="todo-input" class="input" type="text" required />
-        </form>
-        <ul id="todo-list"></ul>
+
+        <div id="main__todo" class="hidden">
+          <div id="todo">
+            <form id="todo-form">
+              <label for="todo-input">What is your main focus for today?</label>
+              <input id="todo-input" class="input" type="text" required />
+            </form>
+            <ul id="todo-list"></ul>
+          </div>
+        </div>
       </main>
 
       <footer id="quote" class="qutoe-bar">
@@ -46,5 +57,6 @@
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>

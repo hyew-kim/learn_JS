@@ -1,0 +1,21 @@
+#weather {
+  position: fixed;
+  right: 0;
+}
+
+.weather__img {
+  height: 50px;
+  width: 50px;
+  opacity: 0.6;
+  position: relative;
+  left: -80px;
+}
+
+.weather__info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -45px;
+  left: -20px;
+  background-color: ;
+}

@@ -1,1 +1,21 @@
+#todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+#todo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#todo-form label {
+  font-size: 35px;
+}
+
+#todo-list li button {
+  background: 0;
+  border: 0;
+  color: white;
+  font-size: medium;
+}
